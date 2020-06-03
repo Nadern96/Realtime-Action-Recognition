@@ -67,7 +67,7 @@ def get_training_imgs_info(
                     actions.add(action_label)
                     action_images_cnt[action_label] = 0
 
-            elif len(line) > 1:  # line != "\n"
+            elif len(line) > 2:  # line != "\n"
                 # print("Line {}, len ={}, {}".format(cnt_line, len(line), line))
                 indices = [int(s) for s in line.split()]
                 idx_start = indices[0]

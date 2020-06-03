@@ -7,12 +7,12 @@ python video2images.py \
 '''
 
 import os
-path = r"../../hmdb51_org/"
+path = r"../Biking"
 image_folder = "../../Realtime-Action-Recognition/data/source_images3/"
 #change dir to tools folder
 #os.chdir("tools")
 
-f= open("../../Realtime-Action-Recognition/data/source_images3/valid_images.txt","a+")
+f= open("../../Realtime-Action-Recognition/data/source_images3/valid_images.txt", 'w+')
 
 for subdir, dirs, files in os.walk(path,topdown=True):
     for file in files:   
@@ -29,7 +29,7 @@ for subdir, dirs, files in os.walk(path,topdown=True):
           
           f.write(classname)
           f.write("\n")
-          f.write("{} {}".format(0,number_files))
+          f.write("{} {}".format(0,number_files-1))
           f.write("\n \n")
 
 f.close()
