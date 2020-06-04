@@ -24,7 +24,7 @@ from tf_pose import common
 
 
 # -- Settings
-MAX_FRACTION_OF_GPU_TO_USE = 0.4
+MAX_FRACTION_OF_GPU_TO_USE = 0.8
 IS_DRAW_FPS = True
 
 # -- Helper functions
