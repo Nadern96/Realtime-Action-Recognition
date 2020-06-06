@@ -27,7 +27,6 @@ Classes = {'clap':1,
 
 
 
-FullList = []
 imagecount = 1
 for subdir, dirs, files in os.walk(path,topdown=True):
     dirs.sort()
