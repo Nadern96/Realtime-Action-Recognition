@@ -6,16 +6,14 @@
 #     The image whose label is not in `classes` will be filtered out. 
 
 #classes: ['lying', 'other', 'sitting', 'standing']
-classes: ['Biking', 
-          'climb', 
-          'climb_stairs', 
+classes: ['clap',
           'hit', 
           'jump',
           'kick',
-          'pick',
           'punch',
           'push',
           'run',
+          'shake_hands',
           'sit',
           'situp',
           'stand',

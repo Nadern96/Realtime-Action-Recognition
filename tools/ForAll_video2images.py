@@ -7,7 +7,7 @@ python video2images.py \
 '''
 
 import os
-path = r"../Biking"
+path = r"../Videodata"
 image_folder = "../../Realtime-Action-Recognition/data/source_images3/"
 #change dir to tools folder
 #os.chdir("tools")
