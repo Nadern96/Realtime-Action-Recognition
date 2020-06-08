@@ -24,10 +24,12 @@ Classes = {'clap':1,
 count = 0 
 full = []
 ImageCount = 0
-itemCount = 0
 for subdir, dirs, files in os.walk(path,topdown=True):
     files.sort()
+    files = sorted(files, key= lambda x: int(x.replace('.txt','')))
+
     for file in files:
+        itemCount = 0
         count += 1    
         print("proccessing file#" + file) 
 
@@ -36,12 +38,14 @@ for subdir, dirs, files in os.walk(path,topdown=True):
         with open(pathtofile) as f:
             items = json.load(f)
             for item in items:
-                item[3] += item[3] + ImageCount
+                # print(item)
+                item[2] = int(item[2]) + ImageCount
                 itemCount += 1
                 full.append(item)
-            
+
+        ImageCount += itemCount +1
 
 
-  with open('../data_proc/raw_skeletons/skeletons_info.txt', 'w+') as outfile:
-                    json.dump(items, outfile)
+with open('../data_proc/raw_skeletons/skeletons_info.txt', 'w+') as outfile:
+    json.dump(full, outfile)
 
