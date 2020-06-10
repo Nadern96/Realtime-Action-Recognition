@@ -23,6 +23,7 @@ Classes = {'clap':1,
 
 count = 0 
 full = []
+labesls = {}
 ImageCount = 0
 for subdir, dirs, files in os.walk(path,topdown=True):
     files.sort()
@@ -37,6 +38,7 @@ for subdir, dirs, files in os.walk(path,topdown=True):
         
         with open(pathtofile) as f:
             items = json.load(f)
+            labesls[items[0][3]] = 0 
             for item in items:
                 # print(item)
                 item[2] = int(item[2]) + ImageCount
@@ -45,7 +47,7 @@ for subdir, dirs, files in os.walk(path,topdown=True):
 
         ImageCount += itemCount +1
 
-
+print(labesls)
 with open('../data_proc/raw_skeletons/skeletons_info.txt', 'w+') as outfile:
     json.dump(full, outfile)
 

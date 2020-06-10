@@ -86,9 +86,9 @@ def evaluate_model(model, classes, tr_X, tr_Y, te_X, te_Y):
           "{:.5f} seconds".format(average_time))
 
     # Plot accuracy
-    axis, cf = lib_plot.plot_confusion_matrix(
-        te_Y, te_Y_predict, classes, normalize=False, size=(12, 8))
-    plt.show()
+    # axis, cf = lib_plot.plot_confusion_matrix(
+    #     te_Y, te_Y_predict, classes, normalize=False, size=(12, 8))
+    # plt.show()
 
 
 
@@ -121,7 +121,7 @@ def main():
 
     # -- Save model
     print("\nSave model to " + DST_MODEL_PATH)
-    with open(DST_MODEL_PATH, 'wb') as f:
+    with open(DST_MODEL_PATH, 'wb+') as f:
         pickle.dump(model, f)
 
 

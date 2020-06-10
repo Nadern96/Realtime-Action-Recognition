@@ -7,15 +7,11 @@
 
 #classes: ['lying', 'other', 'sitting', 'standing']
 classes: ['clap',
-          'hit', 
           'jump',
           'kick',
           'punch',
-          'push',
           'run',
-          'shake_hands',
           'sit',
-          'situp',
           'stand',
           'turn',
           'walk',
